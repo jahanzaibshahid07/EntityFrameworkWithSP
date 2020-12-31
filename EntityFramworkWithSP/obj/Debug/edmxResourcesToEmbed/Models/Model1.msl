@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityframworkModelStoreContainer" CdmEntityContainer="EntityframworkEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EntityframworkModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_deletedata" FunctionName="EntityframworkModel.Store.sp_deletedata" />
+    <FunctionImportMapping FunctionImportName="sp_getdata" FunctionName="EntityframworkModel.Store.sp_getdata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EntityframworkModel.sp_getdata_Result">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getdatabyid" FunctionName="EntityframworkModel.Store.sp_getdatabyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EntityframworkModel.sp_getdatabyid_Result">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_insertdata" FunctionName="EntityframworkModel.Store.sp_insertdata" />
+    <FunctionImportMapping FunctionImportName="sp_updatedata" FunctionName="EntityframworkModel.Store.sp_updatedata" />
+  </EntityContainerMapping>
+</Mapping>
